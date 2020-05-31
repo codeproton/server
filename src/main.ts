@@ -1,6 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ClusterService } from './essential/cluster.service';
 
 async function bootstrap() {
   const { PORT = 3000 } = process.env
@@ -9,4 +8,4 @@ async function bootstrap() {
   await app.listen(PORT);
 }
 
-ClusterService.clusterize(bootstrap)
+bootstrap()

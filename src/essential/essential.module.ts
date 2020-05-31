@@ -1,10 +1,9 @@
 import { Module } from "@nestjs/common";
 import { ConfigService } from "./config.service";
-import { ClusterService } from "./cluster.service";
 
 @Module({
     providers: [
-        ConfigService, ClusterService
+        ConfigService
     ]
 })
 export class EssentialModule {
